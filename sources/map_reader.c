@@ -24,11 +24,9 @@ char    **map_reader(char *map_file)
     if (fd == -1)
         return (NULL);
     hold_map = ft_strdup("");
-    while (1)
+    while (!line)
     {
         line = get_next_line(fd);
-        if (!line)
-            break;
         holder = hold_map;
         hold_map = ft_strjoin(holder, line);
         free(line);
