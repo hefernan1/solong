@@ -6,7 +6,7 @@
 #    By: hefernan <hefernan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/14 13:58:35 by hefernan          #+#    #+#              #
-#    Updated: 2022/03/14 13:59:19 by hefernan         ###   ########.fr        #
+#    Updated: 2022/03/23 00:11:00 by hefernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@ LIBFT			=	$(LIBFT_PATH)/libft.a
 MINILIBX_PATH	=	./minilibx
 MINILIBX		=	$(MINILIBX_PATH)/libmlx.a
 
-SOURCES_FILES	=	so_long.c \
+SOURCES_FILES	=	so_long.c draw_img.c game_init.c gameplay.c map_checker.c \
+					map_reader.c player_moves.c stop_game.c \
 				
 SOURCES_DIR		=	sources
 

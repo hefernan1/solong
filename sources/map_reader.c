@@ -6,7 +6,7 @@
 /*   By: hefernan <hefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 12:34:26 by hefernan          #+#    #+#             */
-/*   Updated: 2022/03/14 15:12:15 by hefernan         ###   ########.fr       */
+/*   Updated: 2022/03/23 00:04:46 by hefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,11 @@ char    **map_reader(char *map_file)
     if (fd == -1)
         return (NULL);
     hold_map = ft_strdup("");
-    while (!line)
+    while (1)
     {
         line = get_next_line(fd);
+        if (!line)
+            break ;
         holder = hold_map;
         hold_map = ft_strjoin(holder, line);
         free(line);
