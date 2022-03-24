@@ -6,7 +6,7 @@
 /*   By: hefernan <hefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 12:34:57 by hefernan          #+#    #+#             */
-/*   Updated: 2022/03/23 00:52:10 by hefernan         ###   ########.fr       */
+/*   Updated: 2022/03/24 18:14:37 by hefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static	int	arg_checker(char *av)
 
 int	main(int ac, char **av)
 {
-	t_game game;
+	t_game	game;
 
 	if (ac == 2)
 	{

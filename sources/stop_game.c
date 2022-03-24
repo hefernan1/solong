@@ -6,7 +6,7 @@
 /*   By: hefernan <hefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 14:40:20 by hefernan          #+#    #+#             */
-/*   Updated: 2022/03/21 14:49:28 by hefernan         ###   ########.fr       */
+/*   Updated: 2022/03/24 17:04:24 by hefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	free_map(char **map)
 {
-	int i;
+	int	i;
 
-    i = 0;
+	i = 0;
 	while (map[i] != '\0')
 	{
 		free(map[i]);

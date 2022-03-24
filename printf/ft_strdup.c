@@ -1,41 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   map_reader.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hefernan <hefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/14 12:34:26 by hefernan          #+#    #+#             */
-/*   Updated: 2022/03/24 18:09:31 by hefernan         ###   ########.fr       */
+/*   Created: 2020/08/13 01:04:53 by hefernan          #+#    #+#             */
+/*   Updated: 2021/09/13 14:20:36 by hefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "ft_printf.h"
 
-char	**map_reader(char *map_file)
+char	*ft_strdup(const char *s1)
 {
-	int		fd;
-	char	*line;
-	char	*hold_map;
-	char	*holder;
-	char	**map;
+	size_t	i;
+	size_t	len;
+	char	*str;
 
-	fd = open (map_file, O_RDONLY);
-	if (fd == -1)
+	i = 0;
+	len = ft_strlen(s1);
+	str = malloc(sizeof(char) * (len + 1));
+	if (!(str))
 		return (NULL);
-	hold_map = ft_strdup("");
-	while (1)
+	while (s1[i])
 	{
-		line = get_next_line(fd);
-		if (!line)
-			break ;
-		holder = hold_map;
-		hold_map = ft_strjoin(holder, line);
-		free(line);
-		free(holder);
+		str[i] = (char)s1[i];
+		i++;
 	}
-	map = ft_split(hold_map, '\n');
-	free(hold_map);
-	close (fd);
-	return (map);
+	str[i] = '\0';
+	return (str);
 }

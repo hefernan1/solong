@@ -6,7 +6,7 @@
 /*   By: hefernan <hefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 14:22:19 by hefernan          #+#    #+#             */
-/*   Updated: 2022/03/23 00:57:45 by hefernan         ###   ########.fr       */
+/*   Updated: 2022/03/24 18:13:05 by hefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,16 @@ static	void	player_update_image(char key, t_game *game)
 	mlx_destroy_image(game->mlx, game->player_img);
 	if (key == 'w')
 		game->player_img = mlx_xpm_file_to_image
-			(game->mlx, "img/PA.xpm", &game->img_L, &game->img_h);
+			(game->mlx, "img/PA.xpm", &game->img_l, &game->img_h);
 	else if (key == 's')
 		game->player_img = mlx_xpm_file_to_image
-			(game->mlx, "img/PD.xpm", &game->img_L, &game->img_h);
+			(game->mlx, "img/PD.xpm", &game->img_l, &game->img_h);
 	else if (key == 'd')
 		game->player_img = mlx_xpm_file_to_image
-			(game->mlx, "img/PD.xpm", &game->img_L, &game->img_h);
+			(game->mlx, "img/PD.xpm", &game->img_l, &game->img_h);
 	else if (key == 'a')
 		game->player_img = mlx_xpm_file_to_image
-			(game->mlx, "img/PA.xpm", &game->img_L, &game->img_h);
+			(game->mlx, "img/PA.xpm", &game->img_l, &game->img_h);
 }
 
 void	player_w(t_game *game)
